@@ -62,5 +62,15 @@ namespace WinForms
             Loja lojaProduto = produto.Loja;
             String nomeLoja = produto.Loja.Nome;
         }
+
+        private void BtnSelectWhere_Click(object sender, EventArgs e)
+        {
+            IEnumerable<Produto> produtosComecadosComA = context.Produtos.Where(p => p.Nome.StartsWith("A")).ToList();
+
+            IEnumerable<Produto> produtosDaLoja = context.Produtos.Where(p => p.LojaId == 1).ToList();
+
+            IEnumerable<Produto> produtosDaLoja2 = context.Lojas.Find(1).Produtos;
+
+        }
     }
 }
