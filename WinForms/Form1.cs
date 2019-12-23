@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Data;
+using Domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,28 @@ namespace WinForms
 {
     public partial class Form1 : Form
     {
+        private ProductDbContext context;
         public Form1()
         {
             InitializeComponent();
+            context = new ProductDbContext();
+        }
+
+        private void BtnInsert_Click(object sender, EventArgs e)
+        {
+            Loja loja = new Loja()
+            {
+                Nome = "Loja teste DevMedia."
+            };
+            context.Lojas.Add(loja);
+            Produto produto = new Produto()
+            {
+                Nome = "Produto teste DevMedia",
+                Valor = 20m,
+                Loja = loja
+            };
+            context.Produtos.Add(produto);
+            context.SaveChanges();
         }
     }
 }
