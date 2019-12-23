@@ -54,5 +54,13 @@ namespace WinForms
 
             context.SaveChanges();
         }
+
+        private void BtnSelect_Click(object sender, EventArgs e)
+        {
+            Produto produto = context.Produtos.Find(2);
+
+            Loja lojaProduto = produto.Loja;
+            String nomeLoja = produto.Loja.Nome;
+        }
     }
 }

@@ -30,6 +30,7 @@
         {
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnSelectInsert = new System.Windows.Forms.Button();
+            this.btnSelect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnInsert
@@ -52,11 +53,22 @@
             this.btnSelectInsert.UseVisualStyleBackColor = true;
             this.btnSelectInsert.Click += new System.EventHandler(this.BtnSelectInsert_Click);
             // 
+            // btnSelect
+            // 
+            this.btnSelect.Location = new System.Drawing.Point(539, 12);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(121, 46);
+            this.btnSelect.TabIndex = 2;
+            this.btnSelect.Text = "Select Loja do Produto";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.BtnSelect_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.btnSelectInsert);
             this.Controls.Add(this.btnInsert);
             this.Name = "Form1";
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnSelectInsert;
+        private System.Windows.Forms.Button btnSelect;
     }
 }
 
