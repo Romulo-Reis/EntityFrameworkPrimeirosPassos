@@ -23,6 +23,6 @@ namespace Domain
         public string Nome { get; set; }
         [MaxLength(2000)]
         public string Descricao { get; set; }
-        public virtual IEnumerable<Produto> Produtos { get; set; }
+        public virtual List<Produto> Produtos { get; set; }
     }
 }
