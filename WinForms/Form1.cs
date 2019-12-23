@@ -37,5 +37,22 @@ namespace WinForms
             context.Produtos.Add(produto);
             context.SaveChanges();
         }
+
+        private void BtnSelectInsert_Click(object sender, EventArgs e)
+        {
+            Loja loja = context.Lojas.Find(1);
+
+            Produto novoProduto = new Produto()
+            {
+                Nome = "Novo produto",
+                Valor = 100m,
+                LojaId = loja.Id,
+                Loja = loja
+            };
+
+            context.Produtos.Add(novoProduto);
+
+            context.SaveChanges();
+        }
     }
 }
