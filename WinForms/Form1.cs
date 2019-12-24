@@ -86,5 +86,15 @@ namespace WinForms
 
             context.SaveChanges();
         }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            //Loja loja = context.Lojas.Find(3);
+            //context.Lojas.Remove(loja);
+
+            Produto produto = context.Produtos.Find(4);
+            context.Produtos.Remove(produto);
+            context.SaveChanges();
+        }
     }
 }
