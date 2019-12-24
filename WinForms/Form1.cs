@@ -25,12 +25,12 @@ namespace WinForms
         {
             Loja loja = new Loja()
             {
-                Nome = "Loja teste DevMedia."
+                Nome = "Loja teste da DevMedia"
             };
             context.Lojas.Add(loja);
             Produto produto = new Produto()
             {
-                Nome = "Produto teste DevMedia",
+                Nome = "Produto teste",
                 Valor = 20m,
                 Loja = loja
             };
@@ -40,7 +40,7 @@ namespace WinForms
 
         private void BtnSelectInsert_Click(object sender, EventArgs e)
         {
-            Loja loja = context.Lojas.Find(1);
+            Loja loja = context.Lojas.Find(3);
 
             Produto novoProduto = new Produto()
             {
@@ -71,6 +71,20 @@ namespace WinForms
 
             IEnumerable<Produto> produtosDaLoja2 = context.Lojas.Find(1).Produtos;
 
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            Loja loja = context.Lojas.Find(3);
+            loja.Nome = "Teste update DevMedia";
+
+            Produto produto = context.Produtos.Find(4);
+            produto.Nome = "Update produto DevMedia";
+            produto.Loja.Nome = "Update via produto";
+
+            loja.Produtos.ForEach(p => p.Valor += p.Valor * 0.1m);
+
+            context.SaveChanges();
         }
     }
 }

@@ -32,6 +32,7 @@
             this.btnSelectInsert = new System.Windows.Forms.Button();
             this.btnSelect = new System.Windows.Forms.Button();
             this.btnSelectWhere = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnInsert
@@ -74,11 +75,22 @@
             this.btnSelectWhere.UseVisualStyleBackColor = true;
             this.btnSelectWhere.Click += new System.EventHandler(this.BtnSelectWhere_Click);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(539, 65);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(121, 41);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSelectWhere);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.btnSelectInsert);
@@ -95,6 +107,7 @@
         private System.Windows.Forms.Button btnSelectInsert;
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.Button btnSelectWhere;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
 
