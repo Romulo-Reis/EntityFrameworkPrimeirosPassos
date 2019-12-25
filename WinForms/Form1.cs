@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -94,6 +95,18 @@ namespace WinForms
 
             Produto produto = context.Produtos.Find(4);
             context.Produtos.Remove(produto);
+            context.SaveChanges();
+        }
+
+        private void BtnUpdateEntityState_Click(object sender, EventArgs e)
+        {
+            Produto produto = new Produto()
+            {
+                Id = 2,
+                Nome = "Teste DevMedia EntityState",
+                LojaId = 1
+            };
+            context.Entry(produto).State = EntityState.Modified;
             context.SaveChanges();
         }
     }

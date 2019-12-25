@@ -34,6 +34,7 @@
             this.btnSelectWhere = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdateEntityState = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnInsert
@@ -96,11 +97,22 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
+            // btnUpdateEntityState
+            // 
+            this.btnUpdateEntityState.Location = new System.Drawing.Point(347, 132);
+            this.btnUpdateEntityState.Name = "btnUpdateEntityState";
+            this.btnUpdateEntityState.Size = new System.Drawing.Size(121, 48);
+            this.btnUpdateEntityState.TabIndex = 6;
+            this.btnUpdateEntityState.Text = "Update via EntityState";
+            this.btnUpdateEntityState.UseVisualStyleBackColor = true;
+            this.btnUpdateEntityState.Click += new System.EventHandler(this.BtnUpdateEntityState_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdateEntityState);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSelectWhere);
@@ -121,6 +133,7 @@
         private System.Windows.Forms.Button btnSelectWhere;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdateEntityState;
     }
 }
 
