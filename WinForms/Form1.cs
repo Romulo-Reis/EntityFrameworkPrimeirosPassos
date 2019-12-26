@@ -76,10 +76,10 @@ namespace WinForms
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            Loja loja = context.Lojas.Find(3);
+            Loja loja = context.Lojas.Find(2);
             loja.Nome = "Teste update DevMedia";
 
-            Produto produto = context.Produtos.Find(4);
+            Produto produto = context.Produtos.Find(6);
             produto.Nome = "Update produto DevMedia";
             produto.Loja.Nome = "Update via produto";
 
@@ -93,7 +93,7 @@ namespace WinForms
             //Loja loja = context.Lojas.Find(3);
             //context.Lojas.Remove(loja);
 
-            Produto produto = context.Produtos.Find(4);
+            Produto produto = context.Produtos.Find(2);
             context.Produtos.Remove(produto);
             context.SaveChanges();
         }
@@ -102,9 +102,9 @@ namespace WinForms
         {
             Produto produto = new Produto()
             {
-                Id = 2,
-                Nome = "Teste DevMedia EntityState",
-                LojaId = 1
+                Id = 13,
+                Nome = "Teste DevMedia EntityState Profiler",
+                LojaId = 2
             };
             context.Entry(produto).State = EntityState.Modified;
             context.SaveChanges();
